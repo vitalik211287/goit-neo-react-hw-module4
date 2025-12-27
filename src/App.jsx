@@ -73,7 +73,6 @@ function App() {
   const [searchQuery, setSearchQuery] = useState("");
   const [page, setPage] = useState(1);
 
-  // const [totalResults, setTotalResults] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
 
   const [isLoading, setIsLoading] = useState(false);
@@ -108,7 +107,7 @@ function App() {
       setSearchQuery(normalized);
       setPage(1);
       setImages([]);
-      setTotalResults(0);
+      // setTotalResults(0);
       setTotalPages(0);
 
       // прибираємо старі тости типу "це всі результати"
@@ -123,15 +122,12 @@ function App() {
       const pages = Math.ceil(total / PER_PAGE);
 
       setImages(results);
-      setTotalResults(total);
       setTotalPages(pages);
 
       if (results.length === 0) {
         toast("Нічого не знайдено 🤷‍♂️", { icon: "🔍" });
         return;
       }
-
-      // toast.success(`Знайдено ${total} фото`);
 
       // якщо все влізло на першу сторінку — одразу кажемо, що це всі результати
       if (pages <= 1) {
@@ -199,12 +195,12 @@ function App() {
       <Toaster position="top-right" />
 
       <SearchBar onSubmit={onSubmit} />
-
+{/* 
       {error && (
         <p style={{ textAlign: "center" }}>
           Сталася помилка запиту. Дивись console.
         </p>
-      )}
+      )} */}
 
       <ImageGallery images={images} onImageClick={openModal} />
 
