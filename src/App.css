@@ -40,7 +40,7 @@
 .read-the-docs {
   color: #888;
 } */
-*,
+/* *,
 *::before,
 *::after {
   margin: 0;
@@ -59,10 +59,10 @@ ol, ul {
 
 a {
   text-decoration: none;
-  /* color: inherit; */
+
 }
 
 button, input, textarea, select {
   font: inherit;
-  /* color: inherit; */
-}
+
+} */

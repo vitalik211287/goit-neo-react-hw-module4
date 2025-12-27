@@ -16,4 +16,7 @@ export default defineConfig({
       components: path.resolve(__dirname, "./src/components"),
     },
   },
+  define: {
+    global: "globalThis",
+  },
 });

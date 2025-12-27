@@ -1,11 +1,14 @@
-import css from './ImageCard.module.css';
+import css from "./ImageCard.module.css";
 
-function ImageCard({ alt_description, urls }) {
+function ImageCard({ image, onImageClick }) {
   return (
-    <li>
-      <div>
-        <img src={urls.regular} alt={alt_description} className={css.imgCard } />
-      </div>
+    <li className={css.item} onClick={() => onImageClick(image)}>
+      <img
+        src={image.urls.small}
+        alt={image.alt_description || "Image"}
+        className={css.imgCard}
+        loading="lazy"
+      />
     </li>
   );
 }
