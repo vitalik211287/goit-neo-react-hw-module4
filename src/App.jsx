@@ -73,7 +73,7 @@ function App() {
   const [searchQuery, setSearchQuery] = useState("");
   const [page, setPage] = useState(1);
 
-  const [totalResults, setTotalResults] = useState(0);
+  // const [totalResults, setTotalResults] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
 
   const [isLoading, setIsLoading] = useState(false);
@@ -131,7 +131,7 @@ function App() {
         return;
       }
 
-      toast.success(`Знайдено ${total} фото`);
+      // toast.success(`Знайдено ${total} фото`);
 
       // якщо все влізло на першу сторінку — одразу кажемо, що це всі результати
       if (pages <= 1) {
